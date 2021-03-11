@@ -5,6 +5,11 @@ import matplotlib.pyplot as plt
 input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
 
+#Uses one of the style available from plt.style.available
+#plt.style.use('seaborn')
+#plt.style.use('fivethirtyeight')
+plt.style.use('Solarize_Light2')
+
 #Common matplotlib convention
 #This function generates 1 or more plots in the same figure. 
 #It returns a tuple containing a figure and axes object(s)
