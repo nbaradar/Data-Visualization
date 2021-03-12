@@ -41,5 +41,3 @@ class RandomWalk:
 
             self.x_values.append(x)
             self.y_values.append(y)
-
-    
