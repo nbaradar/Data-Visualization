@@ -22,7 +22,7 @@ test_y = [(x**2)+(x*20) for x in test_x]
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
 
-#plots a single point at the passed in coordinates
+#scatter() lets you plots a single point at the passed in coordinates
 #The s argument sets the size of the dots used to draw the graph
 #The c argument sets the color of the dots used to draw the graph. You can also use rgb tuple. lower = darker; ex. (0, 0.8, 0)
 ax.scatter(x_values, y_values, c='red', s=10)
@@ -47,4 +47,9 @@ ax.tick_params(axis='both', which='major', labelsize = 14)
 #Matplotlib uses scientific notation as default. See: matplotlib.axes.Axes.ticklabel_format
 ax.ticklabel_format(style='plain')
 
+#You can save the plot to a file with .savefig()
+#1st arg specifies filename, 2nd arg trims whitespace from plot
+plt.savefig('squares_plot.png', bbox_inches='tight')
+
+#.show() opens matplotlibs viewer and displays the plot
 plt.show()

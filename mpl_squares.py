@@ -16,6 +16,8 @@ plt.style.use('Solarize_Light2')
 #figure represents the entire figure or collection of plots
 #ax represents a single plot in the figure and is the variable you use most of the time
 fig, ax = plt.subplots()
+
+#use plot() to plot the data passed in to the axes
 ax.plot(input_values, squares, linewidth=3)
 
 #You can adjust visualization of all features in matplotlib
