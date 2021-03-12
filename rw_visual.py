@@ -5,11 +5,12 @@ from random_walk import RandomWalk
 #Keep making new walks as long as the program is active
 while True:
     #Make a random walk
-    rw = RandomWalk()
+    rw = RandomWalk(100000)
     rw.fill_walk()
 
     #Plot the points in the walk
     plt.style.use('classic')
+    #When creating the plot, pass figsize argument to set the size. The value is a tuple denoting dimensions in inches
     fig, ax = plt.subplots()
 
     #Lets create a color gradient so it's easy to see the order of the walk from light to dark
@@ -19,7 +20,7 @@ while True:
     #We then pass the list in for "c" 
     #We select the colormap gradient by passing value into cmap.
     #Passing 'none' into 'edgecolors' removes the black outline around each point.
-    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.GnBu, edgecolors='none', s=1)
 
     #We can also plot the first and last points seperately to emphasize them
     ax.scatter(0, 0, c='green', edgecolors='none', s=100)
