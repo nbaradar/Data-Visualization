@@ -29,6 +29,7 @@ ax.scatter(x_values, y_values, c='red', s=10)
 
 #Colormaps are a series of colors in a gradient. Used to emphasize pattern in data
 #You must tell pyplot to assign a color to each point in the data set
+#This is why you pass the list of points to the "c" argument
 ax.scatter(test_x, test_y, c=test_y, cmap=plt.cm.Blues, s=10)
 
 #Set Chart title and label axes
