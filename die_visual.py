@@ -23,7 +23,8 @@ for roll_num in range(1000):
     result = d6.roll() + d6_2.roll()
     results2D6.append(result)
 
-for roll_num in range(50000):
+#!TIP! -- In python you can use an "_" in a numeric literal to create visual seperators, like a "," in everyday language. 
+for roll_num in range(50_000):
     result = d6.roll() + d10.roll()
     resultsD6D10.append(result)
 
