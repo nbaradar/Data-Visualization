@@ -1,6 +1,7 @@
 import csv
 
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 filename = 'data/sitka_weather_07-2018_simple.csv'
 
@@ -14,18 +15,24 @@ with open(filename) as f:
 
     #Get the high temperatures for this file
     highs = []
+    dates = []
+
     for row in reader:
         high = int(row[5])
+        current_date = datetime.strptime(row[2], '%Y-%m-%d')
+
         highs.append(high)
+        dates.append(current_date)
 
     plt.style.use('seaborn')
 
     fig, ax = plt.subplots()
 
-    ax.plot(highs, linewidth=2, c='red')
+    ax.plot(dates, highs, linewidth=2, c='red')
 
     ax.set_title("Daily high temperatures, July 2018", fontsize=24)
     ax.set_xlabel("Day", fontsize=16)
+    fig.autofmt_xdate()
     ax.set_ylabel("Temperature (F)", fontsize=16)
 
 
